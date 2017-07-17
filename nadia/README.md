@@ -39,6 +39,8 @@ npm run debug
   - A: Yes, it would. However, it's easier logic for the form itself. Either way, someone has to do the work.
 - Q: Why did you mix a callback and a Promise in `lib/reservations.js`?
   - A: `Joi` doesn't support Promises, but it does support callbacks. I wanted to demonstrate how to test both kinds of asynchronous code.
+- Q: How'd you handle cross-platform support?
+  - A: Avoided relative directories, used `cross-env` to transform environmental variables.
 
 ## Credits
 
