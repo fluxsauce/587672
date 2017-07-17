@@ -27,6 +27,7 @@
     "sqlite": "^2.8.0"
   },
   "devDependencies": {
+    "cross-env": "^5.0.1",
     "nodemon": "^1.11.0"
   }
 }
