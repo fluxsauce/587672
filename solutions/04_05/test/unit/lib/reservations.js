@@ -84,7 +84,7 @@ describe('Reservations Library', function() {
         .catch(error => done(error));
     });
 
-    it('should call the validator with the transformed reservation once', function(done) {
+    it('should call the validator with a transformed reservation once', function(done) {
       const reservation = new Reservation({
         date: '2017/06/10',
         time: '06:02 AM',

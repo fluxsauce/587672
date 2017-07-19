@@ -94,5 +94,5 @@ describe('/reservations', function() {
           done();
         });
     });
-  })
+  });
 });
