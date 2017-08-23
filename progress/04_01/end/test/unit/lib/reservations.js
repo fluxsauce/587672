@@ -18,7 +18,7 @@ describe('Reservations Library', function() {
         .then(actual => actual.should.deep.equal(reservation));
     });
 
-    it('should fail a reservation with a bad email', function() {
+    it('should fail an invalid reservation with a bad email', function() {
       const reservation = new Reservation({
         date: '2017/06/10',
         time: '06:02 AM',
