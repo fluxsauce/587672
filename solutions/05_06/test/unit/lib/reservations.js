@@ -57,7 +57,6 @@ describe('Reservations Library', function() {
           lastID: 1349
         }
       });
-
       reservations = proxyquire('../../../lib/reservations', {
         debug: debugStub,
         sqlite: dbStub
