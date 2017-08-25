@@ -10,7 +10,7 @@ const should = chai.should();
 
 describe('app.js', function() {
   // Backup.
-  const env = process.env['NODE_ENV'];
+  const env = process.env['NODE_ENV'] || 'development';
 
   let app;
   let loggerStub;
@@ -33,12 +33,12 @@ describe('app.js', function() {
       app = proxyquire('../../app', {
         morgan: loggerStub
       });
+      process.env['NODE_ENV'] = env;
       chai.request(app)
         .get('/bananas')
         .end(function(err, res) {
           res.should.have.status(404);
           res.text.should.not.contain('app.js');
-          process.env['NODE_ENV'] = env;
           done();
         });
     });
