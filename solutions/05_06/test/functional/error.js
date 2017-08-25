@@ -38,7 +38,7 @@ describe('app.js', function() {
         .get('/bananas')
         .end(function(err, res) {
           res.should.have.status(404);
-          res.should.not.contain('app.js');
+          res.text.should.not.contain('app.js');
           process.env['NODE_ENV'] = env;
           done();
         });
