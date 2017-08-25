@@ -77,7 +77,7 @@ describe('/reservations', function() {
         });
     });
 
-    it('should not accept an invalid reservation request', function(done) {
+    it('should reject an invalid reservation request', function(done) {
       chai.request(app)
         .post('/reservations')
         .set('content-type', 'application/x-www-form-urlencoded')
