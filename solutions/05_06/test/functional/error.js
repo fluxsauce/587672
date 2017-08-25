@@ -21,10 +21,6 @@ describe('app.js', function() {
       .returns(function(req, res, next) {
         next();
       });
-
-    app = proxyquire('../../app', {
-      morgan: loggerStub
-    });
   });
 
   after(function() {
@@ -34,6 +30,9 @@ describe('app.js', function() {
   context('errors', function() {
     it('should return a 404 for a missing page in production', function(done) {
       process.env['NODE_ENV'] = 'production';
+      app = proxyquire('../../app', {
+        morgan: loggerStub
+      });
       chai.request(app)
         .get('/bananas')
         .end(function(err, res) {
