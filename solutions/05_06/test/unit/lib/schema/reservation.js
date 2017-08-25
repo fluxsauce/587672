@@ -36,7 +36,7 @@ describe('Reservation Schema', function() {
         name: 'Family',
         email: 'username@example.com',
         message: undefined,
-        phone: undefined,
+        phone: undefined
       };
 
       const actual = new Reservation(valid);

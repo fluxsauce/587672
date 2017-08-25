@@ -3,9 +3,9 @@ const sinon = require('sinon');
 const chai = require('chai');
 const should = chai.should();
 const sinonChai = require('sinon-chai');
-chai.use(sinonChai);
 const Reservation = require('../../../lib/schema/reservation');
 const db = require('sqlite');
+chai.use(sinonChai);
 
 describe('Reservations Library', function() {
   const debugStub = function() {
@@ -105,8 +105,9 @@ describe('Reservations Library', function() {
               name: 'Family',
               email: 'username@example.com',
               message: undefined,
-              phone: undefined,
+              phone: undefined
             });
+
           validateSpy.restore();
           done();
         })

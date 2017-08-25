@@ -105,8 +105,9 @@ describe('Reservations Library', function() {
               name: 'Family',
               email: 'username@example.com',
               message: undefined,
-              phone: undefined,
+              phone: undefined
             });
+
           validateSpy.restore();
           done();
         })
